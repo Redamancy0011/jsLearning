@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script>
+    //209020341 蔡文昌
+    var x = 1;
+    function A(y){
+        var x = 2;
+        function B(z){
+            console.log(x+y+z);
+        }
+        return B;
+    }
+    var C = A(2);
+    C(3);
+
+
+
+
+    // var isChinaTelcom = /^1[3589][0-9]{9}$/;
+    // console.log(isChinaTelcom.test('19122644667'))
+
+    // var x = 1;
+    // function A(y){
+    //     var x = 2;
+    //     function B(z){
+    //         console.log(x+y+z);
+    //     }
+    //     return B;
+    // }
+    // var C = A(2);
+    // C(3);
+
+    // var sj = Math.floor(Math.random()*3+1);
+    // console.log(sj)
+
+    // var txt = new String("949700303@qq.com");
+    // var isNum = txt.match("[0-9]+")
+    // console.log(isNum)
+
+    // var isChinaTelcom = /^(?:133|153|177|18[019])\\d{8}$/;
+    // var utils = {
+    //     checkMobile: function(telphone){
+    //         if(isChinaMobile.test(telphone)){
+    //             return this.setReturnJson(true, '移动', {name: 'ChinaMobile'});
+    //         }else{
+    //         return this.setReturnJson(false,'不是移动运营商');
+    //         }
+    //     }
+    // }
+    // isChinaTelcom.test('\19122644667\'')
+
+    // var reg2 = new RegExp("^[sp]\\d{1,4}$","i");
+    // console.log(reg2.test('p123'),
+    //     reg2.test('1234'),
+    //     reg2.test('S10')
+    // )
+
+    // var reg1 = /^\d{4}$/;
+    // console.log(reg1.test('1234'),
+    //     reg1.test('1a34'),
+    //     reg1.test('12345')
+    // )
+
+    // var arr1 = [];
+    // console.log(arr1,arr1.length);  //运行结果:Array[0] 0
+    // var arr2 = [1,2,3];
+    // console.log(arr2[0],arr2.length);   //运行结果:1 3
+    // var arr3 = new Array();
+    // console.log(arr3[1],arr3.length);   //运行结果:undefined 0
+    // arr2.splice(0,1);   //从arr2数组的第0位删除一个元素
+    // console.log(arr2);  //输出删除元素后arr2的元素
+
+    // console.log(isNaN(null),isNaN('123'),isNaN('abc'),isNaN('a1b2c3'));
+    // console.log(eval('87*909+2'));
+    // console.log(parseFloat('123.6'),parseFloat('100px'),parseFloat(010));
+    // console.log(parseInt(123.6),parseInt(0b1011011),parseInt(0x2A),parseInt(0x2A,8));
+    // console.log(Boolean('100'),Boolean(100),!!undefined);
+    // console.log(Number(true),Number(null),+undefined);
+  </script>
+</head>
+
+<body>
+<!--<h1 id="time"></h1>-->
+<!--<script>-->
+<!--    //209020341 蔡文昌-->
+<!--    function showdata(){-->
+<!--        var now=new Date()-->
+<!--        var hour=now.getHours() //返回对象的小时-->
+<!--        var minute=now.getMinutes() //返回对象的分钟-->
+<!--        return `${hour}:${minute}`-->
+<!--    }-->
+
+<!--    setInterval(() => {-->
+<!--        var d=showdata()    //调用函数，将返回值传给d-->
+<!--        //    console.log(d);-->
+<!--        time.innerHTML=d-->
+<!--    }, 1000);-->
+</script>
+</body>
+</html>

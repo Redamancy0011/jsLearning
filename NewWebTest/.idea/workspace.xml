@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="NewWebTest:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="58a632f1-14eb-4483-926a-7994a32d3720" name="默认变更列表" comment="提交作业">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HomeWork/Test1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HomeWork/zy2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/HomeWork/zy3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test11.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test12.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/LessonTest/Test9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/MyTest/Test1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ShiYan/sy1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ShiYan/sy2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/ShiYan/sy3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in-class-test" beforeDir="false" afterPath="$PROJECT_DIR$/in-class-test" afterDir="false" />
+    </list>
+    <list id="efde95a6-aac6-4781-9347-cf37f54c0cc0" name="Revert &quot;第一次提交&quot;" comment="Revert &quot;第一次提交&quot;&#10;&#10;This reverts commit e17e6235" />
+    <list id="378637cb-8c1c-43eb-ab8a-230c366fe05c" name="第一次提交" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/webapp/LessonTest/Test7.html" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\cangku\maven\repository" />
+        <option name="userSettingsFile" value="D:\cangku\maven\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MMNTVW3sRFyNbNg7lR11dXYLam" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/anything-project/Branch_of_learning/JavaScriptLearning/NewWebTest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.24" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.24" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/NewWebTest_war_exploded/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="NewWebTest:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/NewWebTest_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="3a8e06a2-1a6f-4b0c-8270-aa967888b699" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61482" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="NewWebTest:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="58a632f1-14eb-4483-926a-7994a32d3720" name="默认变更列表" comment="" />
+      <changelist id="378637cb-8c1c-43eb-ab8a-230c366fe05c" name="第一次提交" comment="" />
+      <created>1677573499834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677573499834</updated>
+      <workItem from="1677573500941" duration="3689000" />
+      <workItem from="1677580185463" duration="1932000" />
+      <workItem from="1677599828554" duration="1065000" />
+      <workItem from="1677630613252" duration="4338000" />
+      <workItem from="1677639133414" duration="75000" />
+      <workItem from="1677639432090" duration="3576000" />
+      <workItem from="1677673850108" duration="122000" />
+      <workItem from="1677673982042" duration="37000" />
+      <workItem from="1677675637829" duration="27000" />
+      <workItem from="1677675675787" duration="51000" />
+      <workItem from="1677675811215" duration="10000" />
+      <workItem from="1677675829573" duration="88000" />
+      <workItem from="1677675969653" duration="252000" />
+      <workItem from="1677676232019" duration="758000" />
+      <workItem from="1677717143268" duration="5000" />
+      <workItem from="1677722287922" duration="18000" />
+      <workItem from="1677722391982" duration="52000" />
+      <workItem from="1677722626132" duration="80000" />
+      <workItem from="1677743921137" duration="7000" />
+      <workItem from="1678064297648" duration="3591000" />
+      <workItem from="1678176255930" duration="5271000" />
+      <workItem from="1678243093037" duration="5472000" />
+      <workItem from="1678248770144" duration="486000" />
+      <workItem from="1678252013314" duration="96000" />
+      <workItem from="1678253227226" duration="611000" />
+      <workItem from="1678668405562" duration="1374000" />
+      <workItem from="1678669803771" duration="3966000" />
+      <workItem from="1678848076513" duration="1403000" />
+      <workItem from="1678878851970" duration="12000" />
+      <workItem from="1679272662565" duration="5949000" />
+      <workItem from="1679386158501" duration="3046000" />
+      <workItem from="1679397151292" duration="295000" />
+      <workItem from="1679454975852" duration="6000" />
+      <workItem from="1679454994531" duration="550000" />
+      <workItem from="1679455735967" duration="16000" />
+      <workItem from="1679476344785" duration="94000" />
+      <workItem from="1679476901948" duration="28000" />
+      <workItem from="1679904043633" duration="2035000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Revert &quot;第一次提交&quot;&#10;&#10;This reverts commit e17e62358cbc3a3bb1ba0c433d37f34b72100155.&#10;&#10;# Conflicts:&#10;#&#9;.idea/vcs.xml" />
+    <MESSAGE value="提交作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交作业" />
+  </component>
+</project>

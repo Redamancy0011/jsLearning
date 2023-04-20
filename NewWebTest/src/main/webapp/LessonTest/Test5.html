@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      function fun(){
+        var num = 0;
+        var a = function f() {
+          return num++;
+        };
+        return a;
+      }
+      var con = fun();
+
+      console.log(con());
+      console.log(con());
+      console.log(con());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

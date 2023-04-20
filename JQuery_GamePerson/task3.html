@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Game</title>
+	<script src="js/JQuery.min.js"></script>
+	<style>
+		input{
+			font-size:26px;
+			margin-top: 20px;
+		}
+		body{
+			background-color: black;
+		}
+		#player{
+			position: absolute;
+			left:10px;
+			top:100px
+		}
+	</style>
+</head>
+<body>
+<img id="player" src="img/player_right.gif"/>
+
+<script>
+	$(document).ready(function() {
+		// 获取角色图片元素
+		var player = $('#player');
+		var isRunning = false;
+
+
+		// 添加双击事件，控制角色变身
+		player.on('dblclick', function () {
+			if (!isRunning) {
+				// 切换角色图片为变身后的图片
+				if (player.attr('src') === 'img/player_right.gif') {
+					player.attr('src', 'img/playerbig_right.gif');
+				} else if (player.attr('src') === 'img/player_left.gif') {
+					player.attr('src', 'img/playerbig_left.gif');
+				} else {
+					player.attr('src', 'img/player_right.gif');
+				}
+			}
+		});
+
+		// 设置角色图片初始位置
+		var initialLeft = 0;
+		var initialTop = 0;
+		player.css('left', initialLeft + 'px');
+		player.css('top', initialTop + 'px');
+
+		// 设置动画延迟时间
+		var animationDelay = 100;
+
+		// 监听键盘按下事件
+		$(document).keydown(function (event) {
+			if (isRunning) {
+				// 如果角色图片正在跑动，不处理新的按键事件
+				return;
+			}
+
+			switch (event.which) {
+				case 37: // 左箭头键
+					// 设置角色图片为向左跑动状态的图片
+					if (player.attr('src') === 'img/player_right.gif' || player.attr('src') === 'img/player_left.gif') {
+						player.attr('src', 'img/player_run_left.gif');
+					} else if (player.attr('src') === 'img/playerbig_left.gif' || player.attr('src') === 'img/playerbig_right.gif') {
+						player.attr('src', 'img/playerbig_left.gif');
+					}
+
+					// 获取角色图片当前的left值
+					var currentLeft = parseInt(player.css('left'));
+
+					// 计算角色图片移动后的left值
+					var newLeft = currentLeft - 50;
+
+					// 判断是否超出窗口左边界
+					if (newLeft < 0) {
+						// 如果超出窗口左边界，设置left值为0，即窗口最左边
+						newLeft = 0;
+					}
+
+					// 执行跑动动作
+					setTimeout(function () {
+						player.animate({left: newLeft + 'px'}, function () {
+							// 跑动动作完成后，设置角色图片为静止状态的图片
+							if (player.attr('src') === 'img/player_run_right.gif' || player.attr('src') === 'img/player_run_left.gif') {
+								player.attr('src', 'img/player_left.gif');
+							} else if (player.attr('src') === 'img/playerbig_left.gif' || player.attr('src') === 'img/playerbig_right.gif') {
+								player.attr('src', 'img/playerbig_left.gif');
+							}
+							isRunning = false;
+						});
+					}, animationDelay);
+
+					isRunning = true;
+					break;
+				case 39: // 右箭头键
+					// 设置角色图片为向右跑动状态的图片
+					if (player.attr('src') === 'img/player_right.gif' || player.attr('src') === 'img/player_left.gif') {
+						player.attr('src', 'img/player_run_right.gif');
+					} else if (player.attr('src') === 'img/playerbig_left.gif' || player.attr('src') === 'img/playerbig_right.gif') {
+						player.attr('src', 'img/playerbig_right.gif');
+					}
+
+					// 获取角色图片当前的left值
+					var currentLeft = parseInt(player.css('left'));
+
+					// 计算角色图片移动后的left值
+					var newLeft = currentLeft + 50;
+
+					// 获取窗口的宽度
+					var windowWidth = $(window).width();
+
+					// 获取角色图片的宽度
+					var playerWidth = player.width();
+
+					// 判断是否超出窗口右边界
+					if (newLeft + playerWidth > windowWidth) {
+						// 如果超出窗口右边界，设置left值为窗口宽度减去角色图片宽度，即窗口最右边
+						newLeft = windowWidth - playerWidth;
+					}
+
+					// 执行跑动动作
+					setTimeout(function () {
+						player.animate({left: newLeft + 'px'}, function () {
+							// 跑动动作完成后，设置角色图片为静止状态的图片
+							if (player.attr('src') === 'img/player_run_right.gif' || player.attr('src') === 'img/player_run_left.gif') {
+								player.attr('src', 'img/player_right.gif');
+							} else if (player.attr('src') === 'img/playerbig_left.gif' || player.attr('src') === 'img/playerbig_right.gif') {
+								player.attr('src', 'img/playerbig_right.gif');
+							}
+							isRunning = false;
+						});
+					}, animationDelay);
+
+					isRunning = true;
+					break;
+				case 38: // 上箭头键
+					// 设置角色图片为向上跑动状态的图片
+					if (player.attr('src') === 'img/player_right.gif') {
+						player.attr('src', 'img/player_run_right.gif');
+					} else if (player.attr('src') === 'img/player_left.gif') {
+						player.attr('src', 'img/player_run_left.gif');
+					} else if (player.attr('src') === 'img/playerbig_right.gif') {
+						player.attr('src', 'img/playerbig_right.gif');
+					} else if (player.attr('src') === 'img/playerbig_left.gif') {
+						player.attr('src', 'img/playerbig_left.gif');
+					}
+
+					// 获取角色图片当前的top值
+					var currentTop = parseInt(player.css('top'));
+
+					// 计算角色图片移动后的top值
+					var newTop = currentTop - 50;
+
+					// 判断是否超出窗口上边界
+					if (newTop < 0) {
+						// 如果超出窗口上边界，设置top值为0，即窗口最上边
+						newTop = 0;
+					}
+
+					// 执行跑动动作
+					setTimeout(function () {
+						player.animate({top: newTop + 'px'}, function () {
+							// 跑动动作完成后，设置角色图片为静止状态的图片
+							if (player.attr('src') === 'img/player_run_right.gif') {
+								player.attr('src', 'img/player_right.gif');
+							} else if (player.attr('src') === 'img/player_run_left.gif') {
+								player.attr('src', 'img/player_left.gif');
+							}
+							isRunning = false;
+						});
+					}, animationDelay);
+
+					isRunning = true;
+					break;
+				case 40: // 下箭头键
+					// 设置角色图片为向下跑动状态的图片
+					if (player.attr('src') === 'img/player_right.gif') {
+						player.attr('src', 'img/player_run_right.gif');
+					} else if (player.attr('src') === 'img/player_left.gif') {
+						player.attr('src', 'img/player_run_left.gif');
+					} else if (player.attr('src') === 'img/playerbig_right.gif') {
+						player.attr('src', 'img/playerbig_right.gif');
+					} else if (player.attr('src') === 'img/playerbig_left.gif') {
+						player.attr('src', 'img/playerbig_left.gif');
+					}
+
+					// 获取角色图片当前的top值
+					var currentTop = parseInt(player.css('top'));
+
+					// 计算角色图片移动后的top值
+					var newTop = currentTop + 50;
+
+					// 获取窗口的高度
+					var windowHeight = $(window).height();
+
+					// 获取角色图片的高度
+					var playerHeight = player.height();
+
+					// 判断是否超出窗口下边界
+					if (newTop + playerHeight > windowHeight) {
+						// 如果超出窗口下边界，设置top值为窗口高度减去角色图片高度，即窗口最下边
+						newTop = windowHeight - playerHeight;
+					}
+
+					// 执行跑动动作
+					setTimeout(function () {
+						player.animate({top: newTop + 'px'}, function () {
+							// 跑动动作完成后，设置角色图片为静止状态的图片
+							if (player.attr('src') === 'img/player_run_right.gif') {
+								player.attr('src', 'img/player_right.gif');
+							} else if (player.attr('src') === 'img/player_run_left.gif') {
+								player.attr('src', 'img/player_left.gif');
+							}
+							isRunning = false;
+						});
+					}, animationDelay);
+
+					isRunning = true;
+					break;
+				default:
+					break;
+			}
+
+		});
+	})
+</script>
+</body>
+</html>

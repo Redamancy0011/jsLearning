@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>让坦克开起来</title>
+		<style type="text/css">
+			input{font-size:26px;margin-top: 20px;}
+			body{background-image: url(images/grassland.png);}
+			#mytank{position: absolute;left:10px;top:100px}
+		</style>
+	</head>
+	<body>
+		<img id="mytank" src="images/right.png"/>
+		<script>
+			// 编写代码，让坦克能上下左右移动
+			// 获取坦克元素
+			var tank = document.getElementById("mytank");
+			// 设置坦克的初始位置
+			var tankLeft = 10; var tankTop = 100;
+			// 监听键盘事件
+			document.onkeydown = function(event){
+				// 获取键盘按键的编码
+				var keyCode = event.keyCode;
+				// 根据按键编码移动坦克
+				switch(keyCode){
+					case 87:
+						// W键
+						tankTop -= 10;
+						if(tankTop < 0){
+							tankTop = 0;
+						}
+						tank.src = "images/up.png"; break;
+					case 83:
+						// S键
+						tankTop += 10;
+						if(tankTop > document.documentElement.clientHeight - tank.offsetHeight){
+							tankTop = document.documentElement.clientHeight - tank.offsetHeight;
+						}
+						tank.src = "images/down.png"; break;
+					case 65:
+						// A键
+						tankLeft -= 10;
+						if(tankLeft < 0){
+							tankLeft = 0;
+						}
+						tank.src = "images/left.png"; break;
+					case 68:
+						// D键
+						tankLeft += 10;
+						if(tankLeft > document.documentElement.clientWidth - tank.offsetWidth){
+							tankLeft = document.documentElement.clientWidth - tank.offsetWidth;
+						}
+						tank.src = "images/right.png"; break;
+				}
+				// 移动坦克
+				tank.style.left = tankLeft + "px";
+				tank.style.top = tankTop + "px";
+			}
+
+			//禁用右键
+			document.addEventListener('contextmenu',function(e){
+				e.preventDefault();
+			})
+		</script>
+	</body>
+</html>

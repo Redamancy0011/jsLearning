@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // var obj = {};
+        // var stu = {
+        //     name: '小米',
+        //     age: 19,
+        //     sex: '男',
+        //     sayHello: function (){
+        //         console.log('Hello');
+        //     }
+        // };
+        //
+        // var stu1 = new Object();
+        // stu1.name = '小李';
+        // stu1.age = 20;
+        // stu1.sex = '男';
+        // stu1.run = function (){
+        //     console.log('跑');
+        // }
+
+        // function objectStu(p_name,p_age,p_sex){
+        //     this.name = p_name;
+        //     this.age = p_age;
+        //     this.sex = p_sex;
+        //     this.run = function (){
+        //         console.log(this.name+'Run')
+        //     };
+        // }
+        //
+        // objectStu.prototype.hello = function (){
+        //     console.log(this.name+'sayHello');
+        // };
+        //
+        // var stu2 = new objectStu('老莫',20,'男');
+        // console.log(stu2.name,stu2.age,stu2.sex);
+        // stu2.run();
+        // stu2.hello();
+        // console.log(Object.getOwnPropertyDescriptor(stu2,'name'));
+
+        // console.log(stu.name,stu.age,stu.sex);
+        // stu.sayHello();
+        // console.log(stu1.name,stu1.age,stu1.sex);
+        // stu1.run();
+
+        var person = {
+            show: function (){
+                console.log("我是"+this.name+"("+this.sex+")");
+            }
+        }
+
+        var p1 = {
+            name: "刘备",
+            sex: "男"
+        }
+        var p2 = {
+            name: "貂蝉",
+            sex: "女"
+        }
+
+        person.show().call(p1);
+        person.show().apply(p2);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

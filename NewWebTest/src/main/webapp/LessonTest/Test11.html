@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style type="text/css">
+    body {
+      font-size: 13px;
+      line-height: 25px;
+    }
+
+    table {
+      border-top: 1px solid #333;
+      border-left: 1px solid #333;
+      width: 300px;
+    }
+
+    td {
+      border-right: 1px solid #333;
+      border-bottom: 1px solid #333;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+  <body>
+    <table border="0" cellspacing="0" cellpadding="0" id="myTable">
+      <tr id="row1">
+        <td>书名</td>
+        <td>价格</td>
+      </tr>
+      <tr id="row2">
+        <td>看得见风景的房间</td>
+        <td class="center">&yen;30.00</td>
+      </tr>
+      <tr id="row3">
+        <td>60个瞬间</td>
+        <td class="center">&yen;32.00</td>
+      </tr>
+    </table>
+    <input name="b1" type="button" value="增加一行" onclick="addRow()" />
+    <input name="b2" type="button" value="删除第2行" onclick="delRow()" />
+    <input name="b3" type="button" value="修改标题样式" onclick="updateRow()" />
+    <input name="b4" type="button" value="复制最后一行" onclick="copyRow()" />
+  </body>
+<script>
+  function updateRow(){
+    var delRow = document.getElementById("row3");
+    var items = delRow.cells[1].getElementsByClassName("row1");
+    var price = "$"+items[0].value;
+    delRow.cells[1].innerHTML = price;
+    delRow.cells[2].innerHTML = "啦啦啦";
+  }
+
+  function delRow(){
+    var delRow = document.getElementById("row3");
+    var delRowIndex = delRow.rowIndex;
+    var table1 = document.getElementById("myTable");
+    table1.deleteRow(delRowIndex);
+  }
+
+  function copyRow(){
+    var copyRow = document.getElementById("row3");
+    var copyRowIndex = copyRow.rowIndex;
+    var table1 = document.getElementById("myTable");
+    table1.cloneNode(copyRowIndex);
+  }
+</script>
+</html>

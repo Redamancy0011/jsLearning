@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新歌榜</title>
+<!--    <script src="/js/JQuery.min.js"></script>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--        }-->
+
+<!--        #mydiv {-->
+<!--            text-align: center;-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+
+<!--        .search {-->
+<!--            padding: 10px 20px;-->
+<!--            font-size: 18px;-->
+<!--            background-color: #007bff;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            cursor: pointer;-->
+<!--        }-->
+
+<!--        .div2 {-->
+<!--            max-width: 500px;-->
+<!--            margin: 0 auto;-->
+<!--            padding: 20px;-->
+<!--            border: 1px solid #ccc;-->
+<!--            background-color: #f9f9f9;-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+
+<!--        img {-->
+<!--            max-width: 100%;-->
+<!--            height: auto;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<div id="mydiv">
+    <input type="submit" value="新歌榜" class="search" id="search"/>
+</div>
+<div class="div2">
+    <div>歌手:<span id="anther"></span> </div>
+    <div>歌名:<span id="name"></span></div>
+    <div>封面:<img src="" width="400" height="500" id="picUrl"></div>
+    <div>歌曲:<audio id="url" autoplay="true" controls></audio></div>
+</div>
+</body>
+<script>
+    // $(document).ready(function() {
+    //     $("#search").click(function() {
+    //         // 发送请求获取新歌榜数据
+    //         $.ajax({
+    //             url: "https://api.vvhan.com/api/rand.music?type=json&sort=新歌榜",
+    //             success: function(response) {
+    //                 // 清空之前的数据
+    //                 $("#anther").empty();
+    //                 $("#name").empty();
+    //                 $("#picUrl").attr("src", "");
+    //                 $("#url").attr("src", "");
+    //
+    //                 // 解析歌曲信息
+    //                 var song = response.data[0];
+    //                 var artist = song.ar[0].name;
+    //                 var songName = song.name;
+    //                 var picUrl = song.al.picUrl;
+    //                 var songUrl = song.url;
+    //
+    //                 // 更新页面显示
+    //                 $("#anther").text(artist);
+    //                 $("#name").text(songName);
+    //                 $("#picUrl").attr("src", picUrl);
+    //                 $("#url").attr("src", songUrl);
+    //             }
+    //         });
+    //     });
+    // });
+    window.addEventListener('load',function (){
+      var btn = document.getElementById("search");
+      window.addEventListener('click',function(){
+          var url='https://api.vvhan.com/api/rand.music?type=json&sort=新歌榜';
+          fetch(url)
+          .then(response=>response.json())
+          .then(data=>{
+              document.getElementById('auther').innerText=data.info.auther;
+              document.getElementById('name').innerHTML=data.info.name;
+              document.getElementById('picUrl').src=data.info.picUrl;
+              document.getElementById('url').src=data.info.mp3url;
+          })
+          .catch(error=>alert(error));
+      })
+    })
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <title>动态生成表格</title>
+  <style type="text/css">
+    table { border-collapse: collapse; margin: 20px auto; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: center; }
+    a { color: red; text-decoration: none; }
+  </style>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>性别</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+</table>
+<script type="text/javascript">
+  // 模拟学生数据
+  var students = [
+    {name: '张三', age: 18, gender: '男'},
+    {name: '李四', age: 20, gender: '女'},
+    {name: '王五', age: 22, gender: '男'},
+    {name: '赵六', age: 19, gender: '女'}
+  ];
+
+  // 获取表格tbody元素
+  var tbody = document.getElementById('tbody');
+
+  // 遍历学生数据，动态创建行、单元格，并为单元格填充数据
+  for (var i = 0; i < students.length; i++) {
+    var tr = document.createElement('tr');
+    var tdName = document.createElement('td');
+    var tdAge = document.createElement('td');
+    var tdGender = document.createElement('td');
+    var tdOperate = document.createElement('td');
+    var aDelete = document.createElement('a');
+
+    tdName.innerHTML = students[i].name;
+    tdAge.innerHTML = students[i].age;
+    tdGender.innerHTML = students[i].gender;
+    aDelete.innerHTML = '删除';
+    aDelete.href = 'javascript:;';
+    aDelete.onclick = function() {
+      tbody.removeChild(this.parentNode.parentNode);
+    };
+
+    tdOperate.appendChild(aDelete);
+    tr.appendChild(tdName);
+    tr.appendChild(tdAge);
+    tr.appendChild(tdGender);
+    tr.appendChild(tdOperate);
+    tbody.appendChild(tr);
+  }
+</script>
+</body>
+</html>
